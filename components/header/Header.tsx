@@ -1,45 +1,25 @@
-import Image from "next/image";
 import React from "react";
-import logo from "../../assets/icon.png";
-import {
-  AiOutlineLogin,
-  AiOutlineSearch,
-  AiOutlineUser,
-  AiOutlineUserAdd,
-  AiOutlineUserSwitch,
-} from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 
 const Header = () => {
   return (
-    <header className="bg-slate-500 ">
-      <div className="flex items-center justify-between px-4 max-w-7xl mx-auto">
-        <div className="flex items-center group">
-          <Image
-            src={logo}
-            width="60"
-            height="60"
-            className="group-hover:cursor-pointer"
-          />
-          <h1 className="font-light text-left  text-2xl text-rose-50 hidden sm:flex group-hover:cursor-pointer">
-            Lenesphotos.com
-          </h1>
-        </div>
-        <div className="flex space-x-4">
-          <div className="flex items-center h-max bg-gray-300 px-3 rounded-full">
-            <input
-              type="text"
-              className="h-8 outline-none text-zinc-700 font-light bg-gray-300"
-              style={{ textDecoration: "none", border: "none" }}
-            />
-            <AiOutlineSearch
-              size={25}
-              className="text-gray-500 p-0 cursor-pointer hover:scale-110"
-            />
-          </div>
-          <AiOutlineLogin className="text-gray-700 " size={30} />
+    <div className="flex bg-gray-50 items-center px-4 py-2 justify-between space-x-3 ...">
+      <div className="flex w-full space-x-2">
+        {/* Title */}
+        <h1 className="text-2xl italic font-mono space-x-3 ">
+          Lenesphotos.com
+        </h1>
+
+        <div className="hidden sm:grow max-w-7xl  sm:flex items-center bg-gray-200 rounded-full px-4  ...">
+          {/* Input */}
+          <AiOutlineSearch className="text-gray-500 " />
+          <input className="sm:grow outline-none px-2 text-gray-600 bg-gray-200 hover:cursor-pointer py-2 " />
         </div>
       </div>
-    </header>
+      <div className="flex">
+        <h1 className=" flex cursor-pointer ">Login / Sign up</h1>
+      </div>{" "}
+    </div>
   );
 };
 
